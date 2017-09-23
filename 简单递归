@@ -1,0 +1,30 @@
+package 递归;
+import java.util.*;
+public class DG 
+{
+	int stacknul=0;
+	public static void main(String[] args) {
+		int i;
+		Scanner in=new Scanner(System.in);
+		System.out.printf("请输入数字：");
+		i=in.nextInt();
+		new DG().recursion(i);
+		}
+	void recursion(int i){
+		if(i<=5000){System.out.println(i);
+		stacknul++;
+		recursion(2*i);
+		}
+		if(i>5000){
+			System.out.println(i);
+			recursiona(i);
+			}
+		}
+	void recursiona(int i){
+		if(stacknul>=0){
+			System.out.println(i);
+			stacknul--;
+			recursiona(i>>=1);
+			}
+		}
+	}
